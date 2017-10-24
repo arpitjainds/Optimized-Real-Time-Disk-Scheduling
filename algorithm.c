@@ -29,7 +29,7 @@ int main()
   //h denotes total head Movement
   //i,k,j denote dummy variables
   //x denotes extreme head position
-  //flag denotes how many times you want to enter processes
+  //flag denotes whether you want to continue the process
 
   int n,i,h=0,x,k,j;
   char flag = 'f';
@@ -46,12 +46,13 @@ int main()
 
   if(flag == 'f')
   {
-    a[n-1]=0;
+    //for first time the head starts from 0 position
+    a[0]=0;
 
     //taking input of processes track location from user
 
     printf("\nEnter processes in request order");
-    for(i=0;i<n-1;i++)
+    for(i=1;i<n;i++)
     {
       scanf("%d",&a[i]);
     }
